@@ -1,5 +1,18 @@
 module W2vUtils
 
-# package code goes here
+  export
+  W2vData,
+  nwords,
+  projdim,
+  vocabulary,
+  wordindex,
+  projection,
+  distance,
+  nearest_words,
+  analogy,
+  load
+
+  include("common.jl")
+  include("w2v_data.jl")
 
 end # module
