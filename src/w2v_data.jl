@@ -92,7 +92,7 @@ function analogy(wv::W2vData, words::Array{UTF8String}; n=15)
   v1 = projection(wv, words[1])
   v2 = projection(wv, words[2])
   v3 = projection(wv, words[3])
-  vec = v1 - v2 + v3
+  vec = v2 - v1 + v3
 
   nearest_words(wv, vec; n=n, reject_words=words)
 end
