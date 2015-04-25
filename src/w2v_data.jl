@@ -58,7 +58,7 @@ function distance(wv::W2vData, word::UTF8String; n=15)
   (bestw, bestd)
 end
 
-function nearest_words(wv::W2vData, vec::DenseMatrix{Float64}; n=15, reject_words::Array{UTF8String}=[])
+function nearest_words(wv::W2vData, vec::DenseMatrix{Float64}; n=15, reject_words::Array{UTF8String}=[utf8("")])
   vec /= norm(vec)
 
   bestw = repeat([utf8("")]; inner=[n])
